@@ -17,17 +17,13 @@ PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/sm6225-common-miuicamera
 
 DEVICE_CAMERA_PATH := device/xiaomi/sm6225-common-miuicamera
-TARGET_USES_MIUI_CAMERA := true 
+TARGET_USES_MIUI_CAMERA := true
 
 # Camera property
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.lens.oem_camera_package=com.android.camera \
     ro.miui.build.region=in \
     ro.miui.notch=1
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.vendor.camera.privapp.list=com.android.camera \
-    vendor.camera.aux.packagelist=com.android.camera
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_CAMERA_PATH)/configs/hidl/xiaomi_framework_compatibility_matrix.xml
